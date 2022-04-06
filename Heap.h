@@ -38,6 +38,8 @@ public:
 
     const T& top() const;
 
+    bool isEmpty() const noexcept;
+
 
 private:
     std::vector<T> nodes; // actual underlying node structure

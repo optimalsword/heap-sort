@@ -91,6 +91,9 @@
 		<Unit filename="C:/programming/CS 3250/projects/project2/Heap.h">
 			<Option target="project2"/>
 		</Unit>
+		<Unit filename="C:/programming/CS 3250/projects/project2/heap_sort.cpp">
+			<Option target="project2"/>
+		</Unit>
 		<Unit filename="C:/programming/CS 3250/projects/project2/main.cpp">
 			<Option target="project2"/>
 		</Unit>

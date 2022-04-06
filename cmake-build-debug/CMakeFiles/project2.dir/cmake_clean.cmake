@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/project2.dir/heap_sort.cpp.obj"
   "CMakeFiles/project2.dir/main.cpp.obj"
   "libproject2.dll.a"
   "project2.exe"

@@ -142,6 +142,33 @@ project2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\project2.dir\build.make CMakeFiles/project2.dir/build
 .PHONY : project2/fast
 
+heap_sort.obj: heap_sort.cpp.obj
+
+.PHONY : heap_sort.obj
+
+# target to build an object file
+heap_sort.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\project2.dir\build.make CMakeFiles/project2.dir/heap_sort.cpp.obj
+.PHONY : heap_sort.cpp.obj
+
+heap_sort.i: heap_sort.cpp.i
+
+.PHONY : heap_sort.i
+
+# target to preprocess a source file
+heap_sort.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\project2.dir\build.make CMakeFiles/project2.dir/heap_sort.cpp.i
+.PHONY : heap_sort.cpp.i
+
+heap_sort.s: heap_sort.cpp.s
+
+.PHONY : heap_sort.s
+
+# target to generate assembly for a file
+heap_sort.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\project2.dir\build.make CMakeFiles/project2.dir/heap_sort.cpp.s
+.PHONY : heap_sort.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -178,6 +205,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... project2
+	@echo ... heap_sort.obj
+	@echo ... heap_sort.i
+	@echo ... heap_sort.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

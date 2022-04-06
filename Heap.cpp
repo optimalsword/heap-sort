@@ -32,6 +32,12 @@ const T& Heap<T>::top() const {
 }
 
 
+template <typename T>
+bool Heap<T>::isEmpty() const noexcept {
+    return size == 0;
+}
+
+
 /**
  * MODIFIERS
  */
@@ -43,27 +49,44 @@ const T& Heap<T>::top() const {
 
      uint32_t current = (pos / 2) - 1;
 
-     while (size > 0 && item < temp[current]) {
+     while (pos > 1 && item < temp[current]) {
          temp[pos - 1] = temp[current];
          temp[current] = item;
 
          pos = pos / 2;
+         current  = (pos / 2) - 1;
      }
 
-     ++size;
      nodes = temp;
+     ++size;
  }
 
 
+ //pop the minimum from the vector (root of the binary tree)
+ //the largest value will float down to re-heapify the data structure
  template <typename T>
  void Heap<T>::pop() {
      uint32_t pos = 1;
      std::vector<T> temp(nodes);
      temp[pos - 1] = temp[size - 1];
+     temp.resize(size - 1);
 
-     uint32_t current;
-     while (temp[pos - 1] > temp[(2 * pos) - 1] || temp[pos - 1] > temp[2 * pos]) {
-         uint32_t _temp = temp[pos - 1];
+     while (((2 * pos) - 1 < size - 1 && temp[pos - 1] > temp[(2 * pos) - 1])
+                || (2 * pos < size - 1 && temp[pos - 1] > temp[2 * pos])) {
+
+         T _temp = temp[pos - 1];
+         if (2 * pos > size - 1 || temp[(2 * pos) - 1] < temp[2 * pos]) {
+             temp[pos - 1] = temp[(2 * pos) - 1];
+             temp[(2 * pos) - 1] = _temp;
+
+             pos = 2 * pos;
+         } else {
+             temp[pos - 1] = temp[2 * pos];
+             temp[2 * pos] = _temp;
+             pos = (2 * pos) + 1;
+         }
      }
 
+     nodes = temp;
+     --size;
  }

@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/programming/CS 3250/projects/project2/Heap.cpp
+
+C:/programming/CS 3250/projects/project2/Heap.h
+vector
+-
+cstdint
+-
+Heap.cpp
+C:/programming/CS 3250/projects/project2/Heap.cpp
+
+C:/programming/CS 3250/projects/project2/main.cpp
+iostream
+-
+Heap.h
+C:/programming/CS 3250/projects/project2/Heap.h
+
